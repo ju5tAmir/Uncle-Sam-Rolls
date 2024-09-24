@@ -17,4 +17,9 @@ public class CustomerService: ICustomerService
     {
         return _context.Customers.ToList();
     }
+
+    public Customer? GetById(int id)
+    {
+        return _context.Customers.Find(id);
+    }
 }
