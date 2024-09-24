@@ -13,3 +13,6 @@
 /home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/DataAccess/bin/Debug/net8.0/DataAccess.runtimeconfig.json
 /home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/DataAccess/obj/Debug/net8.0/DataAccess.csproj.AssemblyReference.cache
 /home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/DataAccess/obj/Debug/net8.0/DataAccess.genruntimeconfig.cache
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/DataAccess/bin/Debug/net8.0/Domain.dll
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/DataAccess/bin/Debug/net8.0/Domain.pdb
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/DataAccess/obj/Debug/net8.0/DataAccess.csproj.Up2Date

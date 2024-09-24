@@ -1,0 +1,13 @@
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/Domain/bin/Debug/net8.0/Domain.deps.json
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/Domain/bin/Debug/net8.0/Domain.dll
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/Domain/bin/Debug/net8.0/Domain.pdb
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/Domain/obj/Debug/net8.0/Domain.csproj.AssemblyReference.cache
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/Domain/obj/Debug/net8.0/Domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/Domain/obj/Debug/net8.0/Domain.AssemblyInfoInputs.cache
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/Domain/obj/Debug/net8.0/Domain.AssemblyInfo.cs
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/Domain/obj/Debug/net8.0/Domain.csproj.CoreCompileInputs.cache
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/Domain/obj/Debug/net8.0/Domain.sourcelink.json
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/Domain/obj/Debug/net8.0/Domain.dll
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/Domain/obj/Debug/net8.0/refint/Domain.dll
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/Domain/obj/Debug/net8.0/Domain.pdb
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/Domain/obj/Debug/net8.0/ref/Domain.dll
