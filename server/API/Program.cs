@@ -13,10 +13,13 @@ builder.Services.AddDbContext<UncleSamContext>(options =>
         );
 });
 builder.Services.AddControllers();
+builder.Services.AddOpenApiDocument();
 
 var app = builder.Build();
 
 app.MapControllers();
+app.UseOpenApi();
+app.UseSwaggerUi();
 
 app.UseCors(options =>
 {
@@ -25,4 +28,5 @@ app.UseCors(options =>
         .AllowAnyHeader()
         .AllowCredentials();
 });
+
 app.Run();
