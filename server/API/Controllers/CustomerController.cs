@@ -1,6 +1,8 @@
+using Application.DTOs.customer;
 using Application.Interfaces;
 using DataAccess;
 using Microsoft.AspNetCore.Mvc;
+using YamlDotNet.Core.Tokens;
 
 namespace API.Controllers;
 
@@ -40,5 +42,20 @@ public class CustomerController: ControllerBase
         }
 
         return Ok(customer);
+    }
+
+    
+    [HttpPost]
+    [Route("create")]
+    public ActionResult<CustomerResponseDto>? CreateCustomer([FromBody] CustomerCreateDto createDto)
+    {
+        CustomerResponseDto? responseDto = _customerService.Create(createDto);
+
+        if (responseDto == null)
+        {
+            return BadRequest();
+        }
+
+        return Ok(responseDto);
     }
 }
