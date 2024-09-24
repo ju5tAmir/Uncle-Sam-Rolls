@@ -37,3 +37,17 @@
 /home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/API/bin/Debug/net8.0/Domain.pdb
 /home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/API/obj/Debug/net8.0/API.csproj.AssemblyReference.cache
 /home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/API/obj/Debug/net8.0/API.csproj.Up2Date
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/API/bin/Debug/net8.0/Namotion.Reflection.dll
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/API/bin/Debug/net8.0/Newtonsoft.Json.dll
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/API/bin/Debug/net8.0/NJsonSchema.dll
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/API/bin/Debug/net8.0/NJsonSchema.Annotations.dll
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/API/bin/Debug/net8.0/NJsonSchema.NewtonsoftJson.dll
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/API/bin/Debug/net8.0/NJsonSchema.Yaml.dll
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/API/bin/Debug/net8.0/NSwag.Annotations.dll
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/API/bin/Debug/net8.0/NSwag.AspNetCore.dll
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/API/bin/Debug/net8.0/NSwag.Core.dll
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/API/bin/Debug/net8.0/NSwag.Core.Yaml.dll
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/API/bin/Debug/net8.0/NSwag.Generation.dll
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/API/bin/Debug/net8.0/NSwag.Generation.AspNetCore.dll
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/API/bin/Debug/net8.0/YamlDotNet.dll
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/API/obj/Debug/net8.0/API.MvcApplicationPartsAssemblyInfo.cs
