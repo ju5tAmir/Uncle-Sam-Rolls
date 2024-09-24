@@ -1,0 +1,15 @@
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/DataAccess/bin/Debug/net8.0/DataAccess.deps.json
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/DataAccess/bin/Debug/net8.0/DataAccess.dll
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/DataAccess/bin/Debug/net8.0/DataAccess.pdb
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/DataAccess/obj/Debug/net8.0/DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/DataAccess/obj/Debug/net8.0/DataAccess.AssemblyInfoInputs.cache
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/DataAccess/obj/Debug/net8.0/DataAccess.AssemblyInfo.cs
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/DataAccess/obj/Debug/net8.0/DataAccess.csproj.CoreCompileInputs.cache
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/DataAccess/obj/Debug/net8.0/DataAccess.sourcelink.json
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/DataAccess/obj/Debug/net8.0/DataAccess.dll
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/DataAccess/obj/Debug/net8.0/refint/DataAccess.dll
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/DataAccess/obj/Debug/net8.0/DataAccess.pdb
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/DataAccess/obj/Debug/net8.0/ref/DataAccess.dll
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/DataAccess/bin/Debug/net8.0/DataAccess.runtimeconfig.json
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/DataAccess/obj/Debug/net8.0/DataAccess.csproj.AssemblyReference.cache
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/DataAccess/obj/Debug/net8.0/DataAccess.genruntimeconfig.cache
