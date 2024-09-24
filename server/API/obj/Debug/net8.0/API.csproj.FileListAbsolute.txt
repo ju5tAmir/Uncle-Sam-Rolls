@@ -24,3 +24,16 @@
 /home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/API/obj/Debug/net8.0/API.pdb
 /home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/API/obj/Debug/net8.0/API.genruntimeconfig.cache
 /home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/API/obj/Debug/net8.0/ref/API.dll
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/API/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.dll
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/API/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/API/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.Relational.dll
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/API/bin/Debug/net8.0/Npgsql.dll
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/API/bin/Debug/net8.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/API/bin/Debug/net8.0/Application.dll
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/API/bin/Debug/net8.0/DataAccess.dll
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/API/bin/Debug/net8.0/Domain.dll
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/API/bin/Debug/net8.0/Application.pdb
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/API/bin/Debug/net8.0/DataAccess.pdb
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/API/bin/Debug/net8.0/Domain.pdb
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/API/obj/Debug/net8.0/API.csproj.AssemblyReference.cache
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/API/obj/Debug/net8.0/API.csproj.Up2Date
