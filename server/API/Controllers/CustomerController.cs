@@ -27,7 +27,7 @@ public class CustomerController: ControllerBase
 
     [HttpGet]
     [Route("{id}")]
-    public ActionResult<Customer> GetCustomer([FromQuery] int id)
+    public ActionResult<Customer> GetCustomer([FromRoute] int id)
     {
         Customer? customer = _customerService.GetById(id);
 
@@ -57,5 +57,19 @@ public class CustomerController: ControllerBase
         }
 
         return Ok(responseDto);
+    }
+
+    [HttpDelete]
+    [Route("{id}")]
+    public ActionResult DeleteCustomer([FromRoute] int id)
+    {
+        bool success = _customerService.Delete(id);
+
+        if (success == false)
+        {
+            return BadRequest();
+        }
+
+        return NoContent();
     }
 }

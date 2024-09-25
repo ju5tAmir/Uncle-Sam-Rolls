@@ -50,4 +50,15 @@ public class CustomerService: ICustomerService
         // If no rows were affected, return null or handle the failure case
         return null;
     }
+
+    public bool Delete(int id)
+    {
+        var customer = _context.Customers.Find(id);
+
+        if (customer == null) 
+            return false;
+
+        _context.Customers.Remove(customer);
+        return _context.SaveChanges() > 0;
+    }
 }
