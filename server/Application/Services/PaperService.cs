@@ -17,8 +17,6 @@ public class PaperService: IPaperService
     }
     
     
-    
-    
     public Paper Create(Paper paper)
     {
         throw new NotImplementedException();

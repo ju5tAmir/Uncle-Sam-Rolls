@@ -36,5 +36,17 @@ public class PropertyController: ControllerBase
 
         return Ok(property);
     }
-    
+
+    [HttpDelete]
+    [Route("{id}")]
+    public ActionResult Delete([FromRoute] int id)
+    {
+        bool success = _propertyService.Delete(id);
+
+        if (!success)
+        {
+            return NotFound();
+        }
+        return NoContent();
+    }
 }

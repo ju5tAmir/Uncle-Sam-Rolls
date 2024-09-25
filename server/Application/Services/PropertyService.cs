@@ -31,6 +31,16 @@ public class PropertyService: IPropertyService
         }
 
         throw new Exception("Failed to create");
+    }
 
+    public bool Delete(int id)
+    {
+        Property? property = _context.Properties.Find(id);
+        if (property == null)
+        {
+            return false;
+        }
+        _context.Properties.Remove(property);
+        return _context.SaveChanges() > 0;
     }
 }
