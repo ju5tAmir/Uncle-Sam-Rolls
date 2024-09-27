@@ -4,6 +4,9 @@ using DataAccess;
 
 namespace Application.Services;
 
+/**
+ * Only admin access
+ */
 public class PropertyService: IPropertyService
 {
     private readonly UncleSamContext _context;

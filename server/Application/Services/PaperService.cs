@@ -1,3 +1,4 @@
+using Application.DTOs.paper;
 using Application.Interfaces;
 using DataAccess;
 
@@ -15,10 +16,22 @@ public class PaperService: IPaperService
     {
         _context = context;
     }
-    
-    
-    public Paper Create(Paper paper)
+
+
+    public List<Paper> GetAll()
     {
-        throw new NotImplementedException();
+        return _context.Papers.ToList();
+    }
+
+    public Paper Create(PaperCreateDto createDto)
+    {
+        Paper? paper = createDto.FromEntity(createDto);
+
+        if (paper == null)
+        {
+            throw new Exception("Failed to create");
+        }
+
+        return paper;
     }
 }

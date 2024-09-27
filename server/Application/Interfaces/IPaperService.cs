@@ -1,9 +1,11 @@
+using Application.DTOs.paper;
 using DataAccess;
 
 namespace Application.Interfaces;
 
 public interface IPaperService
 {
-    Paper Create(Paper paper);
+    List<Paper> GetAll();
+    Paper? Create(PaperCreateDto createDto);
 
 }
