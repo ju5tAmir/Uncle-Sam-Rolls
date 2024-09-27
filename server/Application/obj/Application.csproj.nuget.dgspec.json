@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/Application/Application.csproj": {}
+    "C:\\Users\\radwa\\Documents\\Projects\\Uncle-Sam-Rolls\\server\\Application\\Application.csproj": {}
   },
   "projects": {
-    "/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/Application/Application.csproj": {
+    "C:\\Users\\radwa\\Documents\\Projects\\Uncle-Sam-Rolls\\server\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/Application/Application.csproj",
+        "projectUniqueName": "C:\\Users\\radwa\\Documents\\Projects\\Uncle-Sam-Rolls\\server\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/Application/Application.csproj",
-        "packagesPath": "/home/kali/.nuget/packages/",
-        "outputPath": "/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/Application/obj/",
+        "projectPath": "C:\\Users\\radwa\\Documents\\Projects\\Uncle-Sam-Rolls\\server\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\radwa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\radwa\\Documents\\Projects\\Uncle-Sam-Rolls\\server\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/kali/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\radwa\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -26,8 +26,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/DataAccess/DataAccess.csproj": {
-                "projectPath": "/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/DataAccess/DataAccess.csproj"
+              "C:\\Users\\radwa\\Documents\\Projects\\Uncle-Sam-Rolls\\server\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Users\\radwa\\Documents\\Projects\\Uncle-Sam-Rolls\\server\\DataAccess\\DataAccess.csproj"
               }
             }
           }
@@ -62,21 +62,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/DataAccess/DataAccess.csproj": {
+    "C:\\Users\\radwa\\Documents\\Projects\\Uncle-Sam-Rolls\\server\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/DataAccess/DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\radwa\\Documents\\Projects\\Uncle-Sam-Rolls\\server\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/DataAccess/DataAccess.csproj",
-        "packagesPath": "/home/kali/.nuget/packages/",
-        "outputPath": "/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/DataAccess/obj/",
+        "projectPath": "C:\\Users\\radwa\\Documents\\Projects\\Uncle-Sam-Rolls\\server\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\radwa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\radwa\\Documents\\Projects\\Uncle-Sam-Rolls\\server\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/kali/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\radwa\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -88,8 +88,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/Domain/Domain.csproj": {
-                "projectPath": "/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/Domain/Domain.csproj"
+              "C:\\Users\\radwa\\Documents\\Projects\\Uncle-Sam-Rolls\\server\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\radwa\\Documents\\Projects\\Uncle-Sam-Rolls\\server\\Domain\\Domain.csproj"
               }
             }
           }
@@ -144,21 +144,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/Domain/Domain.csproj": {
+    "C:\\Users\\radwa\\Documents\\Projects\\Uncle-Sam-Rolls\\server\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/Domain/Domain.csproj",
+        "projectUniqueName": "C:\\Users\\radwa\\Documents\\Projects\\Uncle-Sam-Rolls\\server\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/Domain/Domain.csproj",
-        "packagesPath": "/home/kali/.nuget/packages/",
-        "outputPath": "/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/Domain/obj/",
+        "projectPath": "C:\\Users\\radwa\\Documents\\Projects\\Uncle-Sam-Rolls\\server\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\radwa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\radwa\\Documents\\Projects\\Uncle-Sam-Rolls\\server\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/kali/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\radwa\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -208,7 +208,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
