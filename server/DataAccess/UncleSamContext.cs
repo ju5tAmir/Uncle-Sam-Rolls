@@ -18,6 +18,7 @@ public partial class UncleSamContext : DbContext
     public virtual DbSet<Paper> Papers { get; set; }
 
     public virtual DbSet<Property> Properties { get; set; }
+    public virtual DbSet<PaperProperty> PaperProperties { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

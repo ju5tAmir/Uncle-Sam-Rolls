@@ -10,4 +10,7 @@ public interface IPaperService
     Paper? GetPaperById(int id);
     PaperResponseDto? CreatePaper(PaperCreateDto paperCreateDto);
     bool Discontinue(int id);
+    bool RestockPaper(int id, int additionalStock);
+    bool AddPropertyToPaper(int paperId, int propertyId);
+    Property? CreateProperty(string propertyName);
 }
