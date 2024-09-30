@@ -1,3 +1,4 @@
+using System.Security.Cryptography;
 using Application.DTOs.paper;
 using Application.Interfaces;
 using DataAccess;
@@ -27,21 +28,53 @@ public class PaperService: IPaperService
     public PaperResponseDto Create(PaperCreateDto createDto)
     {
         // Receive user input as DTO and convert it into paper
-        Paper? paper = createDto.ToPaper();
-
-        if (paper == null)
+        Paper paper = createDto.GetPaper();
+        // Retrieve list of properties linked to the paper
+        List<Property>? properties = createDto.GetProperties();
+        
+        // Check if a paper with the same name already exists
+        var existingPaper = _context.Papers.FirstOrDefault(p => p.Name == paper.Name);
+        if (existingPaper != null)
         {
-            throw new Exception("Failed to create");
+            Console.WriteLine(existingPaper.Id);
+            throw new Exception("A paper with the same name already exists.");
         }
+
+        // Check for properties
+        foreach (var modelProperty in properties)
+        {
+            // Check if a property with the same name exists 
+            var existingProperty = _context.Properties
+                .FirstOrDefault(p => p.PropertyName == modelProperty.PropertyName);
+
+            if (existingProperty != null)
+            {
+                // Set the id to the existing property id
+                modelProperty.Id = existingProperty.Id;
+                continue; // Move to the next property
+            }
+    
+            // Retrieve the property object from the db via id
+            var dbProperty = _context.Properties.Find(modelProperty.Id);
+    
+            // If the property doesn't exist, add it to the context
+            
+            if (dbProperty == null)
+            {
+                modelProperty.Id = 0; // Set Id to default for new entry
+                _context.Properties.Add(modelProperty);
+                _context.SaveChanges();
+            }
+        }
+
+        // Question: How to link paper and properties in paper_properties table?
         
         // Adding paper object into the db
         _context.Papers.Add(paper);
         _context.SaveChanges();
-
-        // Return necessary fields as DTO
-        // PaperResponseDto responseDto = new PaperResponseDto().FromEntity(paper);
-        PaperResponseDto responseDto = new PaperResponseDto().FromEntity(paper);
         
-        return responseDto;
+        return new PaperResponseDto()
+            .IncludePaper(paper)
+            .IncludeProperties(properties);
     }
 }

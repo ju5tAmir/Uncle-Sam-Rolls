@@ -9,15 +9,29 @@ public class PaperResponseDto
     public bool Discontinued { get; set; }
     public int Stock { get; set; }
     public double Price { get; set; }
+    public List<PropertyDto> Properties { get; set; } = new List<PropertyDto>();
 
-    public PaperResponseDto FromEntity(Paper paper)
+
+    public PaperResponseDto IncludePaper(Paper paper)
     {
-        return new PaperResponseDto
+
+        Name = paper.Name;
+        Discontinued = paper.Discontinued;
+        Stock = paper.Stock;
+        Price = paper.Price;
+
+
+        return this;
+    }
+
+    public PaperResponseDto IncludeProperties(List<Property> properties)
+    {
+        Properties = properties.Select(p => new PropertyDto
         {
-            Name = paper.Name,
-            Discontinued = paper.Discontinued,
-            Stock = paper.Stock,
-            Price = paper.Price,
-        };
+            Id = p.Id,
+            PropertyName = p.PropertyName
+        }).ToList();
+
+        return this;
     }
 }

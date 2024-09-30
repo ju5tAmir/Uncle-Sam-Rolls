@@ -33,7 +33,7 @@ public class PaperController: ControllerBase
         }
         catch (Exception e)
         {
-            return BadRequest(e);
+            return BadRequest(e.Message);
         }
     }
 }
