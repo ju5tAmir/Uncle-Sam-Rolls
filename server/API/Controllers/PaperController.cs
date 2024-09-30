@@ -25,7 +25,7 @@ public class PaperController: ControllerBase
 
     [HttpPost]
     [Route("create")]
-    public ActionResult Create([FromBody] PaperCreateDto createDto)
+    public ActionResult<PaperResponseDto> Create([FromBody] PaperCreateDto createDto)
     {
         try
         {

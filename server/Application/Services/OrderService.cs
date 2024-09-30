@@ -27,8 +27,9 @@ public class OrderService: IOrderService
 
     public Order Create(Order order)
     {
-        throw new NotImplementedException();
+        _context.Orders.Add(order);
+        _context.SaveChanges();
 
-        
+        return order;
     }
 }

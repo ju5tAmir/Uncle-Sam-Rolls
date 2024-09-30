@@ -23,15 +23,25 @@ public class PaperService: IPaperService
         return _context.Papers.ToList();
     }
 
-    public Paper Create(PaperCreateDto createDto)
+    // ToDo: Possibility to create paper with properties
+    public PaperResponseDto Create(PaperCreateDto createDto)
     {
-        Paper? paper = createDto.FromEntity(createDto);
+        // Receive user input as DTO and convert it into paper
+        Paper? paper = createDto.ToPaper();
 
         if (paper == null)
         {
             throw new Exception("Failed to create");
         }
+        
+        // Adding paper object into the db
+        _context.Papers.Add(paper);
+        _context.SaveChanges();
 
-        return paper;
+        // Return necessary fields as DTO
+        // PaperResponseDto responseDto = new PaperResponseDto().FromEntity(paper);
+        PaperResponseDto responseDto = new PaperResponseDto().FromEntity(paper);
+        
+        return responseDto;
     }
 }

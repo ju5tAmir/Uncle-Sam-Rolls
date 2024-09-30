@@ -2,20 +2,22 @@ using Application.DTOs.property;
 using DataAccess;
 
 namespace Application.DTOs.paper;
-public class PaperCreateDto
+
+public class PaperResponseDto
 {
     public string Name { get; set; } = null!;
     public bool Discontinued { get; set; }
     public int Stock { get; set; }
     public double Price { get; set; }
-    public Paper ToPaper()
+
+    public PaperResponseDto FromEntity(Paper paper)
     {
-        return new Paper
+        return new PaperResponseDto
         {
-            Name = Name,
-            Discontinued = Discontinued,
-            Stock = Stock,
-            Price = Price
+            Name = paper.Name,
+            Discontinued = paper.Discontinued,
+            Stock = paper.Stock,
+            Price = paper.Price,
         };
     }
 }
