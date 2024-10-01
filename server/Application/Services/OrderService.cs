@@ -22,13 +22,19 @@ public class OrderService: IOrderService
 
     public Order GetOrder(int id)
     {
-        throw new NotImplementedException();
+        return _context.Orders.Find(id) ?? throw new ArgumentException("Order not found");
     }
+
 
     public Order Create(Order order)
     {
-        throw new NotImplementedException();
+        if (order == null)
+        {
+            throw new ArgumentNullException(nameof(order));
+        }
 
-        
+        _context.Orders.Add(order);
+        _context.SaveChanges();
+        return order;
     }
 }
