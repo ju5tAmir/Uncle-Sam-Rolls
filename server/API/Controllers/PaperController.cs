@@ -24,7 +24,7 @@ namespace API.Controllers
         }
 
         [HttpGet]
-        [Route("{paperid}")]
+        [Route("{id}")]
         public ActionResult<Paper> GetPaper([FromRoute] int id)
         {
             Paper? paper = _paperService.GetPaperById(id);
@@ -52,10 +52,10 @@ namespace API.Controllers
         }
 
         [HttpPost]
-        [Route("{paperid}")]
-        public ActionResult DiscontinuePaper([FromRoute] int paperid) 
+        [Route("{id}/discontinue")]
+        public ActionResult DiscontinuePaper([FromRoute] int id) 
         {
-            bool success = _paperService.Discontinue(paperid); 
+            bool success = _paperService.Discontinue(id); 
 
             if (!success)
             {
@@ -66,10 +66,10 @@ namespace API.Controllers
         }
         
         [HttpPost]
-        [Route("{paperid}/restock")]
-        public ActionResult RestockPaper([FromRoute] int paperId, [FromBody] int additionalStock)
+        [Route("{id}/restock")]
+        public ActionResult RestockPaper([FromRoute] int id, [FromBody] int additionalStock)
         {
-            bool success = _paperService.RestockPaper(paperId, additionalStock);
+            bool success = _paperService.RestockPaper(id, additionalStock);
 
             if (!success)
             {
@@ -80,10 +80,10 @@ namespace API.Controllers
         }
         
         [HttpPost]
-        [Route("{paperid}/addproperty/{propertyId}")]
-        public ActionResult AddPropertyToPaper([FromRoute] int paperId, [FromRoute] int propertyId)
+        [Route("{paperid}/addproperty/{propertyid}")]
+        public ActionResult AddPropertyToPaper([FromRoute] int paperid, [FromRoute] int propertyid)
         {
-            bool success = _paperService.AddPropertyToPaper(paperId, propertyId);
+            bool success = _paperService.AddPropertyToPaper(paperid, propertyid);
 
             if (!success)
             {
