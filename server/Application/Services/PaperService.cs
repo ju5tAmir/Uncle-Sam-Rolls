@@ -69,6 +69,7 @@ namespace Application.Services
             return affectedRows > 0;
         }
         
+        
         public bool AddPropertyToPaper(int paperId, int propertyId)
         {
             var paper = _context.Papers.Find(paperId);
@@ -78,14 +79,6 @@ namespace Application.Services
             {
                 return false;
             }
-            
-            var paperProperty = new PaperProperty
-            {
-                PaperId = paperId,
-                PropertyId = propertyId
-            };
-
-            _context.PaperProperties.Add(paperProperty);
 
             int affectedRows = _context.SaveChanges();
 
