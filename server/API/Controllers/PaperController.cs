@@ -1,4 +1,5 @@
 ﻿using Application.DTOs.paper;
+using Application.DTOs.property;
 using Application.Interfaces;
 using DataAccess;
 using Microsoft.AspNetCore.Mvc;
@@ -80,10 +81,10 @@ namespace API.Controllers
         }
         
         [HttpPost]
-        [Route("{paperid}/addproperty/{propertyid}")]
-        public ActionResult AddPropertyToPaper([FromRoute] int paperid, [FromRoute] int propertyid)
+        [Route("{paperid}/addproperty/{propertyId}")]
+        public ActionResult AddPropertyToPaper([FromRoute] int paperid, [FromRoute] int propertyId)
         {
-            bool success = _paperService.AddPropertyToPaper(paperid, propertyid);
+            bool success = _paperService.AddPropertyToPaper(paperid, propertyId);
 
             if (!success)
             {
@@ -92,6 +93,7 @@ namespace API.Controllers
 
             return Ok();
         }
+
         
         [HttpPost]
         [Route("createproperty")]

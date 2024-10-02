@@ -1,6 +1,7 @@
 ﻿using Application.DTOs.paper;
 using Application.Interfaces;
 using DataAccess;
+using Microsoft.EntityFrameworkCore;
 
 namespace Application.Services
 {
@@ -72,16 +73,20 @@ namespace Application.Services
         
         public bool AddPropertyToPaper(int paperId, int propertyId)
         {
-            var paper = _context.Papers.Find(paperId);
+            var paper = _context.Papers.Include(p => p.Properties).FirstOrDefault(p => p.Id == paperId);
             var property = _context.Properties.Find(propertyId);
 
             if (paper == null || property == null)
             {
                 return false;
             }
+            
+            if (!paper.Properties.Contains(property))
+            {
+                paper.Properties.Add(property);
+            }
 
             int affectedRows = _context.SaveChanges();
-
             return affectedRows > 0;
         }
         
