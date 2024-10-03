@@ -32,7 +32,7 @@ public class PaperService: IPaperService
 
     public PaperResponseDto Create(PaperCreateDto createDto)
     {
-        CreatePaperValidator(createDto);
+        PaperCreateValidator.IsValid(createDto);
         
         Paper paper = createDto.ToPaper();
 
@@ -47,16 +47,5 @@ public class PaperService: IPaperService
         }
         
         return PaperResponseDto.FromEntity(paper);
-    }
-
-    
-    private void CreatePaperValidator(PaperCreateDto createDto)
-    {
-        var validateResult = new PaperCreateValidator().Validate(createDto);
-
-        if (!validateResult.IsValid)
-        {
-            throw new ValidationException(validateResult.Errors);
-        }
     }
 }

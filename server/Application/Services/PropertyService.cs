@@ -25,7 +25,7 @@ public class PropertyService: IPropertyService
 
     public PropertyResponseDto Create(PropertyCreateDto propertyCreateDto)
     {
-        CreatePropertyValidator(propertyCreateDto);
+        PropertyCreateValidator.IsValid(propertyCreateDto);
         
         Property property = propertyCreateDto.ToProperty();
 
@@ -51,14 +51,5 @@ public class PropertyService: IPropertyService
         _context.Properties.Remove(property);
         return _context.SaveChanges() > 0;
     }
-
-    private void CreatePropertyValidator(PropertyCreateDto createDto)
-    {
-        var result = new PropertyCreateValidator().Validate(createDto);
-        
-        if (!result.IsValid)
-        {
-            throw new ValidationException(result.Errors);
-        }
-    }
+    
 }
