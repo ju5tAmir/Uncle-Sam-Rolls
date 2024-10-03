@@ -6,6 +6,6 @@ namespace Application.Interfaces;
 public interface IPropertyService
 {
     List<Property> GetAll();
-    Property? Create(PropertyCreateDto propertyCreateDto);
+    PropertyResponseDto Create(PropertyCreateDto propertyCreateDto);
     bool Delete(int id);
 }

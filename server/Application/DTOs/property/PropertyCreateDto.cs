@@ -6,12 +6,11 @@ public class PropertyCreateDto
 {
     public string PropertyName { get; set; } = null!;
 
-    public Property FromEntity(PropertyCreateDto createDto)
+    public Property ToProperty()
     {
         return new Property()
         {
-            PropertyName = createDto.PropertyName,
-            Papers = new List<Paper>()
+            PropertyName = PropertyName
         };
     }
 }

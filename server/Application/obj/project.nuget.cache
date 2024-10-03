@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "wSfTmHc+Wy0=",
+  "dgSpecHash": "ebcRAqGtMnk=",
   "success": true,
   "projectFilePath": "/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/Application/Application.csproj",
   "expectedPackageFiles": [
+    "/home/kali/.nuget/packages/fluentvalidation/11.10.0/fluentvalidation.11.10.0.nupkg.sha512",
     "/home/kali/.nuget/packages/microsoft.entityframeworkcore/8.0.8/microsoft.entityframeworkcore.8.0.8.nupkg.sha512",
     "/home/kali/.nuget/packages/microsoft.entityframeworkcore.abstractions/8.0.8/microsoft.entityframeworkcore.abstractions.8.0.8.nupkg.sha512",
     "/home/kali/.nuget/packages/microsoft.entityframeworkcore.analyzers/8.0.8/microsoft.entityframeworkcore.analyzers.8.0.8.nupkg.sha512",

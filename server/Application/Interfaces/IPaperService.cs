@@ -6,6 +6,6 @@ namespace Application.Interfaces;
 public interface IPaperService
 {
     List<Paper> GetAll();
-    Paper? Create(PaperCreateDto createDto);
+    PaperResponseDto Create(PaperCreateDto createDto);
 
 }

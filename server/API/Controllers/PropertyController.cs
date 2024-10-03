@@ -27,14 +27,14 @@ public class PropertyController: ControllerBase
     [Route("create")]
     public ActionResult<Property> Create([FromBody] PropertyCreateDto createDto)
     {
-        Property? property = _propertyService.Create(createDto);
-
-        if (property == null)
+        try
         {
-            return BadRequest();
+            return Ok(_propertyService.Create(createDto));
         }
-
-        return Ok(property);
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
     }
 
     [HttpDelete]

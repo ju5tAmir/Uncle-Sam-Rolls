@@ -1,12 +1,19 @@
 using Application.DTOs.paper;
 using Application.Interfaces;
+using Application.Validators;
+using Application.Validators.paper;
 using DataAccess;
+using FluentValidation;
+using Microsoft.EntityFrameworkCore;
 
 namespace Application.Services;
 
 /**
  * This paper is like products that we have to list and show for the customer
  * It should be accessible only for admins to CRUD
+ */
+/*
+ * ToDo: Show user friendly exceptions for the user.
  */
 public class PaperService: IPaperService
 {
@@ -23,15 +30,33 @@ public class PaperService: IPaperService
         return _context.Papers.ToList();
     }
 
-    public Paper Create(PaperCreateDto createDto)
+    public PaperResponseDto Create(PaperCreateDto createDto)
     {
-        Paper? paper = createDto.FromEntity(createDto);
+        CreatePaperValidator(createDto);
+        
+        Paper paper = createDto.ToPaper();
 
-        if (paper == null)
+        try
         {
-            throw new Exception("Failed to create");
+            _context.Papers.Add(paper);
+            _context.SaveChanges();
         }
+        catch (DbUpdateException e)
+        {
+            throw new DbUpdateException(e.Message);
+        }
+        
+        return PaperResponseDto.FromEntity(paper);
+    }
 
-        return paper;
+    
+    private void CreatePaperValidator(PaperCreateDto createDto)
+    {
+        var validateResult = new PaperCreateValidator().Validate(createDto);
+
+        if (!validateResult.IsValid)
+        {
+            throw new ValidationException(validateResult.Errors);
+        }
     }
 }

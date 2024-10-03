@@ -8,17 +8,15 @@ public class PaperCreateDto
     public bool Discontinued { get; set; }
     public int Stock { get; set; }
     public double Price { get; set; }
-    public ICollection<Property> Properties { get; set; } = new List<Property>();
 
-    public Paper? FromEntity(PaperCreateDto createDto)
+    public Paper ToPaper()
     {
         return new Paper()
         {
-            Name = createDto.Name,
-            Discontinued = createDto.Discontinued,
-            Stock = createDto.Stock,
-            Price = createDto.Price,
-            Properties = createDto.Properties
+            Name = Name,
+            Discontinued = Discontinued,
+            Stock = Stock,
+            Price = Price,
         };
     }
 }

@@ -8,11 +8,14 @@
 
     <ItemGroup>
       <Folder Include="DTOs\order\" />
-      <Folder Include="Validators\" />
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\DataAccess\DataAccess.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="FluentValidation" Version="11.10.0" />
     </ItemGroup>
 
 </Project>

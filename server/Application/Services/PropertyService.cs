@@ -1,6 +1,8 @@
 using Application.DTOs.property;
 using Application.Interfaces;
+using Application.Validators.property;
 using DataAccess;
+using FluentValidation;
 
 namespace Application.Services;
 
@@ -21,19 +23,22 @@ public class PropertyService: IPropertyService
         return _context.Properties.ToList();
     }
 
-    public Property? Create(PropertyCreateDto propertyCreateDto)
+    public PropertyResponseDto Create(PropertyCreateDto propertyCreateDto)
     {
-        Property? property = propertyCreateDto.FromEntity(propertyCreateDto);
+        CreatePropertyValidator(propertyCreateDto);
+        
+        Property property = propertyCreateDto.ToProperty();
 
-        _context.Properties.Add(property);
-        int success = _context.SaveChanges();
-
-        if (success > 0)
+        try
         {
-            return property;
+            _context.Properties.Add(property);
+        }
+        catch (Exception e)
+        {
+            throw new Exception(e.Message);
         }
 
-        throw new Exception("Failed to create");
+        return PropertyResponseDto.FromEntity(property);
     }
 
     public bool Delete(int id)
@@ -45,5 +50,15 @@ public class PropertyService: IPropertyService
         }
         _context.Properties.Remove(property);
         return _context.SaveChanges() > 0;
+    }
+
+    private void CreatePropertyValidator(PropertyCreateDto createDto)
+    {
+        var result = new PropertyCreateValidator().Validate(createDto);
+        
+        if (!result.IsValid)
+        {
+            throw new ValidationException(result.Errors);
+        }
     }
 }
