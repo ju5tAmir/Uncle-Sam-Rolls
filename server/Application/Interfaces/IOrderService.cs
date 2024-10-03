@@ -1,3 +1,4 @@
+using Application.DTOs.customer;
 using Application.DTOs.order;
 using DataAccess;
 
@@ -10,5 +11,7 @@ public interface IOrderService
     OrderResponseDto Create(OrderCreateDto orderCreateDto);
     OrderResponseDto GetOrderById(int id);
     List<OrderResponseDto> GetOrdersByCustomerId(int customerId);
+    List<CustomerOrdersDto> GetHistoryForUsers();
     OrderResponseDto Update(OrderUpdateDto updateDto);
+    
 }

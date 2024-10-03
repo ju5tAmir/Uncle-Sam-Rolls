@@ -57,6 +57,20 @@ public class OrderController : ControllerBase
             return BadRequest(e.Message);
         }
     }
+    
+    [HttpGet]
+    [Route("history")]
+    public ActionResult<List<OrderResponseDto>> GetHistoryForUsers()
+    {
+        try
+        {
+            return Ok(_orderService.GetHistoryForUsers());
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
+    }
 
     [HttpPatch]
     [Route("update")]

@@ -1,3 +1,4 @@
+using Application.DTOs.customer;
 using Application.DTOs.order;
 using Application.Interfaces;
 using DataAccess;
@@ -99,6 +100,20 @@ public class OrderService: IOrderService
         }
 
         return orders;
+    }
+
+    public List<CustomerOrdersDto> GetHistoryForUsers()
+    {
+        try
+        {
+            List<Customer> customers = _context.Customers.Include(o => o.Orders).ThenInclude(oe => oe.OrderEntries).ToList();
+            
+            return customers.Select(c => CustomerOrdersDto.FromEntity(c)).ToList();
+        }
+        catch (Exception e)
+        {
+            throw new Exception(e.Message);
+        }
     }
 
     public OrderResponseDto Update(OrderUpdateDto updateDto)
