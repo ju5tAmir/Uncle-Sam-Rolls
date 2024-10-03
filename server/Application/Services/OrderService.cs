@@ -2,6 +2,7 @@ using Application.DTOs.order;
 using Application.Interfaces;
 using DataAccess;
 using Domain.Enums;
+using Microsoft.EntityFrameworkCore;
 
 namespace Application.Services;
 
@@ -85,5 +86,18 @@ public class OrderService: IOrderService
     public OrderResponseDto GetOrderById(int id)
     {
         throw new NotImplementedException();
+    }
+
+    public List<OrderResponseDto> GetOrdersByCustomerId(int customerId)
+    {
+        List<OrderResponseDto> orders = new();
+
+        foreach (var order in _context.Orders.Where(o => o.CustomerId == customerId).ToList())
+        {
+            List<OrderEntry> orderEntries = _context.OrderEntries.Where(oe => oe.OrderId == order.Id).ToList();
+            orders.Add(OrderResponseDto.FromEntity(order, orderEntries));
+        }
+
+        return orders;
     }
 }

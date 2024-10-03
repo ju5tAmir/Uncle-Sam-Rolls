@@ -29,4 +29,23 @@ public class OrderResponseDto
             }).ToList()
         };
     }
+    
+    
+    public static OrderResponseDto FromEntity(Order order, List<OrderEntry> orderEntries)
+    {
+        return new OrderResponseDto()
+        {
+            Id = order.Id,
+            OrderDate = order.OrderDate,
+            DeliveryDate = order.DeliveryDate,
+            Status = order.Status,
+            TotalAmount = order.TotalAmount,
+            CustomerId = order.CustomerId,
+            OrderEntries = orderEntries.Select(o => new OrderEntryDto
+            {
+                Quantity = o.Quantity,
+                PaperId = o.ProductId
+            }).ToList()
+        };
+    }
 }

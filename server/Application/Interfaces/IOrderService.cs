@@ -9,4 +9,5 @@ public interface IOrderService
     Order GetOrder(int id);
     OrderResponseDto Create(OrderCreateDto orderCreateDto);
     OrderResponseDto GetOrderById(int id);
+    List<OrderResponseDto> GetOrdersByCustomerId(int customerId);
 }

@@ -43,4 +43,18 @@ public class OrderController : ControllerBase
             return BadRequest(e.Message);
         }
     }
+
+    [HttpPost]
+    [Route("history")]
+    public ActionResult<List<OrderResponseDto>> GetOrdersByCustomerId([FromBody] int customerId)
+    {
+        try
+        {
+            return Ok(_orderService.GetOrdersByCustomerId(customerId));
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
+    }
 }
