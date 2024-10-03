@@ -10,4 +10,6 @@ public interface IPaperService
     PaperResponseDto Create(PaperCreateDto createDto);
 
     AddPropertiesToPaperResponseDto AddPropertiesToPaper(AddPropertiesToPaperDto addPropertiesToPaperDto);
+
+    PaperResponseDto RestockPaper(int paperId, int restockCount);
 }

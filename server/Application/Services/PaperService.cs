@@ -94,4 +94,19 @@ public class PaperService: IPaperService
 
         return AddPropertiesToPaperResponseDto.FromEntity(paper);
     }
+
+    public PaperResponseDto RestockPaper(int paperId, int restockCount)
+    {
+        Paper? paper = _context.Papers.FirstOrDefault(p => p.Id == paperId);
+
+        if (paper == null)
+        {
+            throw new KeyNotFoundException("Paper not found.");
+        }
+
+        paper.Stock = restockCount;
+        _context.SaveChanges();
+        
+        return PaperResponseDto.FromEntity(paper);
+    }
 }

@@ -52,5 +52,20 @@ public class PaperController : ControllerBase
             return BadRequest(e.Message);
         }
     }
+    
+    [HttpPost]
+    [Route("restock")]
+    public ActionResult<AddPropertiesToPaperResponseDto> RestockPaper(
+        int paperId, int restockCount)
+    {
+        try
+        {
+            return Ok(_paperService.RestockPaper(paperId, restockCount));
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
+    }
 
 }
