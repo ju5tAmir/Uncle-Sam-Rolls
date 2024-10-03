@@ -57,4 +57,18 @@ public class OrderController : ControllerBase
             return BadRequest(e.Message);
         }
     }
+
+    [HttpPatch]
+    [Route("update")]
+    public ActionResult<OrderResponseDto> UpdateOrderProperty([FromBody] OrderUpdateDto updateDto)
+    {
+        try
+        {
+            return Ok(_orderService.Update(updateDto));
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
+    }
 }

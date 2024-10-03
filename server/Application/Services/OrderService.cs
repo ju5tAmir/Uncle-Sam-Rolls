@@ -100,4 +100,25 @@ public class OrderService: IOrderService
 
         return orders;
     }
+
+    public OrderResponseDto Update(OrderUpdateDto updateDto)
+    {
+        // Fetch the existing order
+        var order = _context.Orders
+            .Include(o => o.OrderEntries)
+            .FirstOrDefault(o => o.Id == updateDto.Id);
+
+        if (order == null)
+        {
+            throw new Exception("Order not found."); 
+        }
+
+        // Update the order status
+        order.Status = updateDto.Status;
+
+        // Save changes
+        _context.SaveChanges();
+
+        return OrderResponseDto.FromEntity(order);
+    }
 }

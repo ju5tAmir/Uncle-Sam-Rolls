@@ -10,4 +10,5 @@ public interface IOrderService
     OrderResponseDto Create(OrderCreateDto orderCreateDto);
     OrderResponseDto GetOrderById(int id);
     List<OrderResponseDto> GetOrdersByCustomerId(int customerId);
+    OrderResponseDto Update(OrderUpdateDto updateDto);
 }
