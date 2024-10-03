@@ -68,4 +68,18 @@ public class PaperController : ControllerBase
         }
     }
 
+    [HttpPost]
+    [Route("discontinue")]
+    public ActionResult<AddPropertiesToPaperResponseDto> DiscontinuePaper(
+        int paperId, bool status)
+    {
+        try
+        {
+            return Ok(_paperService.DiscontinuePaper(paperId, status));
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
+    }
 }

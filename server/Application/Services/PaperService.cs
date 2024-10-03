@@ -109,4 +109,19 @@ public class PaperService: IPaperService
         
         return PaperResponseDto.FromEntity(paper);
     }
+
+    public PaperResponseDto DiscontinuePaper(int paperId, bool status)
+    {
+        Paper? paper = _context.Papers.FirstOrDefault(p => p.Id == paperId);
+
+        if (paper == null)
+        {
+            throw new KeyNotFoundException("Paper not found.");
+        }
+
+        paper.Discontinued = status;
+        _context.SaveChanges();
+        
+        return PaperResponseDto.FromEntity(paper);
+    }
 }

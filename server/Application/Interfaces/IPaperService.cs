@@ -12,4 +12,5 @@ public interface IPaperService
     AddPropertiesToPaperResponseDto AddPropertiesToPaper(AddPropertiesToPaperDto addPropertiesToPaperDto);
 
     PaperResponseDto RestockPaper(int paperId, int restockCount);
+    PaperResponseDto DiscontinuePaper(int paperId, bool status);
 }
