@@ -1,3 +1,4 @@
+using Application.DTOs.order;
 using DataAccess;
 
 namespace Application.Interfaces;
@@ -6,5 +7,6 @@ public interface IOrderService
 {
     List<Order> GetOrders();
     Order GetOrder(int id);
-    Order Create(Order order);
+    OrderResponseDto Create(OrderCreateDto orderCreateDto);
+    OrderResponseDto GetOrderById(int id);
 }
