@@ -26,9 +26,25 @@ public class PaperService: IPaperService
     }
 
 
-    public List<Paper> GetAll()
+    public List<PaperToClient> GetAll()
     {
-        return _context.Papers.ToList();
+        return _context.Papers
+            .Include(p => p.Properties)
+            .Select(p => PaperToClient.FromEntity(p))
+            .ToList();
+    }
+
+    
+
+    public List<PropertyToClient> GetPropertiesByPaperId(int paperId)
+    {
+        return _context.Properties
+            .Where(property => property.Papers.Any(paper => paper.Id == paperId))
+            .Select(property => new PropertyToClient()
+            {
+                PropertyId = property.Id,
+                PropertyName = property.PropertyName
+            }).ToList();
     }
 
     public PaperResponseDto Create(PaperCreateDto createDto)
@@ -48,6 +64,22 @@ public class PaperService: IPaperService
         }
         
         return PaperResponseDto.FromEntity(paper);
+    }
+
+    public PaperToClient GetPaperById(int id)
+    {
+        var paper = _context.Papers
+            .Where(p => p.Id == id)
+            .Include(p => p.Properties) 
+            .FirstOrDefault();
+
+        if (paper == null)
+        {
+            throw new KeyNotFoundException("Paper not found");
+        }
+
+
+        return PaperToClient.FromEntity(paper);
     }
 
     /**

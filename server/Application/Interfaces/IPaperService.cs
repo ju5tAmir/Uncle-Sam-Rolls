@@ -6,9 +6,10 @@ namespace Application.Interfaces;
 
 public interface IPaperService
 {
-    List<Paper> GetAll();
+    List<PaperToClient> GetAll();
+    List<PropertyToClient> GetPropertiesByPaperId(int paperId);
     PaperResponseDto Create(PaperCreateDto createDto);
-
+    PaperToClient GetPaperById(int id);
     AddPropertiesToPaperResponseDto AddPropertiesToPaper(AddPropertiesToPaperDto addPropertiesToPaperDto);
 
     PaperResponseDto RestockPaper(int paperId, int restockCount);

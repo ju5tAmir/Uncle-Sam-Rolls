@@ -19,11 +19,33 @@ public class PaperController : ControllerBase
 
     [HttpGet]
     [Route("all")]
-    public ActionResult<List<Paper>> GetAll()
+    public ActionResult<List<PaperToClient>> GetAll()
     {
         return Ok(_paperService.GetAll());
     }
+    
+    [HttpGet]
+    [Route("{id}")]
+    public ActionResult<PaperToClient> GetPaperById(int id)
+    {
+        try
+        {
+            return Ok(_paperService.GetPaperById(id));
+        }
+        catch (Exception e)
+        {
+            return NotFound(e.Data);
+        }
+}
 
+    [HttpGet]
+    [Route("{id}/properties")]
+    public ActionResult<List<PropertyToClient>> GetPropertiesByPaperId(int id)
+    {
+        return Ok(_paperService.GetPropertiesByPaperId(id));
+    }
+
+    
     [HttpPost]
     [Route("create")]
     public ActionResult<PaperResponseDto> Create([FromBody] PaperCreateDto createDto)
