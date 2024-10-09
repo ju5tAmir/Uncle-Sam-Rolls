@@ -1,20 +1,26 @@
+import React from "react";
+
 const LandingPage = () => {
     return (
-        <>
-            <div className="hero min-h-full">
-                <div className="hero-content text-center">
-                    <div className="max-w-md">
-                        <h1 className="text-5xl font-bold">Hello there</h1>
-                        <p className="py-6">
-                            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-                            quasi. In deleniti eaque aut repudiandae et a id nisi.
-                        </p>
-                        <button className="btn btn-primary">Get Started</button>
-                    </div>
-                </div>
+    <div className="flex flex-col min-h-screen bg-gray-100">
+        <div className="flex-grow flex flex-col items-center justify-center text-center">
+            <h1 className="text-4xl font-bold text-gray-800 mb-4">Welcome to Our Paper Store</h1>
+            <p className="text-lg text-gray-600 mb-6">
+                Discover high-quality paper products for all your needs. From art paper to printing paper, we have
+                it all!
+            </p>
+            <button
+                className="bg-blue-600 text-white px-6 py-3 rounded-md shadow-md hover:bg-blue-700 transition duration-200">
+                Shop Now
+            </button>
+
+            <div className="mt-12">
+
             </div>
-        </>
-    )
+        </div>
+    </div>
+);
+
 }
 
 export default LandingPage;

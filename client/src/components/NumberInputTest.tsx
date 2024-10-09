@@ -1,7 +1,18 @@
+import {useState} from "react";
+import useCardUtils from "../utilities/CardUtils.ts";
 
+interface props {
+    onChange?: () => void,
+    value: number,
+}
 
 // @ts-ignore
-const NumberInput = ({ value, onChange }) => {
+const NumberInputTest = (props: props) => {
+
+    const [value, setValue] = useState(props.value);
+
+    const cardUtils = useCardUtils();
+
     return (
         <div className={"flex flex-col gap-2 w-40 inline-flex"}>
             <label>Quantity</label>
@@ -13,7 +24,7 @@ const NumberInput = ({ value, onChange }) => {
 
                         // Check for non-strings and empty
                         if (/^\d*$/.test(newVal)) {
-                            onChange(newVal === '' ? 1 : parseInt(newVal, 10));
+                            setValue(newVal === '' ? 1 : parseInt(newVal, 10));
                         }
                     }}
                     value={value}
@@ -24,7 +35,7 @@ const NumberInput = ({ value, onChange }) => {
                     disabled={value === 1}
                     className="absolute left-2 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400 "
                     onClick={() => {
-                        onChange(value - 1);
+                        setValue(value - 1);
                     }}
                 >
                     <svg
@@ -43,7 +54,7 @@ const NumberInput = ({ value, onChange }) => {
                 <button
                     className="absolute right-2 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400"
                     onClick={() => {
-                        onChange(value + 1);
+                        setValue(value + 1);
                     }}
                 >
                     <svg
@@ -62,4 +73,4 @@ const NumberInput = ({ value, onChange }) => {
     );
 };
 
-export default NumberInput;
+export default NumberInputTest;

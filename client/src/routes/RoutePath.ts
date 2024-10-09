@@ -3,5 +3,6 @@ export const RoutePath = {
     papers: "/papers",
     paperById: (id: number | undefined) => id ? `/papers/${id}` : '/404',
     access: "/access",
-    checkout: "/checkout"
+    checkout: "/checkout",
+    orders: "/orders",
 }

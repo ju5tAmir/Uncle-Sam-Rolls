@@ -86,7 +86,25 @@ public class OrderService: IOrderService
 
     public OrderResponseDto GetOrderById(int id)
     {
-        throw new NotImplementedException();
+        try
+        {
+            Order? order = _context.Orders
+                .Include(o => o.OrderEntries)
+                .SingleOrDefault(o => o.Id == id); 
+
+            // Check if the order is null
+            if (order == null)
+            {
+                throw new KeyNotFoundException($"Order with ID {id} not found.");
+            }
+
+            return OrderResponseDto.FromEntity(order);
+        }
+        catch (Exception e)
+        {
+            // Optionally, log the exception here
+            throw new Exception("An error occurred while retrieving the order.", e);
+        }
     }
 
     public List<OrderResponseDto> GetOrdersByCustomerId(int customerId)
@@ -136,4 +154,6 @@ public class OrderService: IOrderService
 
         return OrderResponseDto.FromEntity(order);
     }
+
+  
 }

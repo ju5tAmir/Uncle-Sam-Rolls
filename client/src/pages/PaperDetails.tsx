@@ -88,6 +88,7 @@ const PaperDetails = () => {
                             ))}
                         </div>
 
+
                         <NumberInput value={counter} onChange={setCounter}/>
 
                         <Button onClick={() => {

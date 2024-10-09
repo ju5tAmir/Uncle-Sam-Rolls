@@ -1,10 +1,10 @@
 import {CheckoutItemProps} from "../models/CheckouteItemProps.ts";
 import NumberInput from "./NumberInput.tsx";
 import {ThemeProvider} from "@material-tailwind/react";
-import value = ThemeProvider.propTypes.value;
 import useCardUtils from "../utilities/CardUtils.ts";
 import {useState} from "react";
 import RemoveButton from "./RemoveButton.tsx";
+import NumberInputTest from "./NumberInputTest.tsx";
 
 const CheckoutItem  = (CheckoutItemProps: CheckoutItemProps) => {
 
@@ -36,7 +36,10 @@ const CheckoutItem  = (CheckoutItemProps: CheckoutItemProps) => {
                         </div>
 
                         <div className="flex flex-row gap-5 justify-between items-center">
-                            <NumberInput value={counter} onChange={setCounter}/>
+                            <NumberInputTest
+                                value={CheckoutItemProps.size}
+                                onChange={() => {
+                                }}/>
                             <RemoveButton className="mt-7" onClick={() => {
                                 cardUtils.removeItemFromCard(CheckoutItemProps.item)
                             }}/>
