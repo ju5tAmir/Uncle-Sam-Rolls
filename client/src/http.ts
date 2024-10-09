@@ -1,7 +1,7 @@
 import {Api} from "../Api.ts";
 
-export const apiClient = () => {
-    return new Api({
-        baseURL: "http://localhost:1337"
-    })
-}
+const baseUrl = "http://localhost:1337"
+
+export const http = new Api({
+    baseURL: baseUrl
+});

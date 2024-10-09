@@ -1,5 +1,7 @@
-export const Routes = {
+export const RoutePath = {
     home: "/",
-    products: "/products/",
-    products: (id: number | undefined) => id ? `/products/${id}` : '/404'
+    papers: "/papers",
+    paperById: (id: number | undefined) => id ? `/papers/${id}` : '/404',
+    access: "/access",
+    checkout: "/checkout"
 }

@@ -144,6 +144,18 @@ export interface OrderUpdateDto {
   status?: string;
 }
 
+export interface PaperToClient {
+  /** @format int32 */
+  id?: number;
+  name?: string;
+  discontinued?: boolean;
+  /** @format int32 */
+  stock?: number;
+  /** @format double */
+  price?: number;
+  properties?: PropertyToClient[];
+}
+
 export interface PropertyToClient {
   /** @format int32 */
   propertyId?: number;
@@ -482,8 +494,23 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @request GET:/api/paper/all
      */
     paperGetAll: (params: RequestParams = {}) =>
-      this.request<Paper[], any>({
+      this.request<PaperToClient[], any>({
         path: `/api/paper/all`,
+        method: "GET",
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Paper
+     * @name PaperGetPaperById
+     * @request GET:/api/paper/{id}
+     */
+    paperGetPaperById: (id: number, params: RequestParams = {}) =>
+      this.request<PaperToClient, any>({
+        path: `/api/paper/${id}`,
         method: "GET",
         format: "json",
         ...params,
