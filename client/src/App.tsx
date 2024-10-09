@@ -13,6 +13,8 @@ import LabPage from "./pages/LabPage.tsx";
 import LandingPage from "./pages/LandingPage.tsx";
 import HomePage from "./pages/HomePage.tsx";
 import Footer from "./pages/Footer.tsx";
+import React from "react";
+import SuccessfulOrderWrapper from "./pages/SuccessfulOrderWrapper.tsx";
 
 function App()  {
 
@@ -29,7 +31,7 @@ function App()  {
                 <Route path={RoutePath.orders} element={<OrdersPage/>}/>
                 <Route path={`${RoutePath.orders}/:id`} element={<OrderDetails/>}/>
                 <Route path={"/lab"} element={<LabPage/>}/>
-
+                <Route path="/success" element={<SuccessfulOrderWrapper />} />
             </Routes>
           {/*<Footer/>*/}
             <DevTools/>

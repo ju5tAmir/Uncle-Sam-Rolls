@@ -1,6 +1,11 @@
 import React from "react";
+import {useNavigate} from "react-router-dom";
+import {RoutePath} from "../routes/RoutePath.ts";
 
 const LandingPage = () => {
+
+    const navigate = useNavigate();
+
     return (
     <div className="flex flex-col min-h-screen bg-gray-100">
         <div className="flex-grow flex flex-col items-center justify-center text-center">
@@ -10,6 +15,9 @@ const LandingPage = () => {
                 it all!
             </p>
             <button
+                onClick={() => {
+                    navigate(RoutePath.papers)
+                }}
                 className="bg-blue-600 text-white px-6 py-3 rounded-md shadow-md hover:bg-blue-700 transition duration-200">
                 Shop Now
             </button>
