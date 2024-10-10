@@ -132,6 +132,19 @@ export interface OrderEntryDto {
   quantity?: number;
 }
 
+export interface OrderEntryDetailedDto {
+  /** @format int32 */
+  id?: number;
+  name?: string;
+  discontinued?: boolean;
+  /** @format int32 */
+  stock?: number;
+  /** @format double */
+  price?: number;
+  /** @format int32 */
+  quantity?: number;
+}
+
 export interface OrderCreateDto {
   orderEntries?: OrderEntryDto[];
   /** @format int32 */
@@ -415,6 +428,21 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     orderGetAllOrders: (params: RequestParams = {}) =>
       this.request<OrderResponseDto[], any>({
         path: `/api/order/get/all`,
+        method: "GET",
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Order
+     * @name OrderGetOrderDetails
+     * @request GET:/api/order/{id}/details
+     */
+    orderGetOrderDetails: (id: number, params: RequestParams = {}) =>
+      this.request<OrderEntryDetailedDto[], any>({
+        path: `/api/order/${id}/details`,
         method: "GET",
         format: "json",
         ...params,

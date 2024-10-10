@@ -30,6 +30,20 @@ public class OrderController : ControllerBase
     }
     
     [HttpGet]
+    [Route("{id}/details")]
+    public ActionResult<List<OrderEntryDetailedDto>> GetOrderDetails(int id)
+    {
+        try
+        {
+            return Ok(_orderService.GetOrderEntryDetails(id));
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
+    }
+    
+    [HttpGet]
     [Route("{id}")]
     public ActionResult<OrderResponseDto> GetOrderById([FromRoute] int id)
     {

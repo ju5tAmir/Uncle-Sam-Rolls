@@ -168,5 +168,16 @@ public class OrderService: IOrderService
         return OrderResponseDto.FromEntity(order);
     }
 
-  
+    public List<OrderEntryDetailedDto> GetOrderEntryDetails(int orderId)
+    {
+        return _context.Orders
+            .Where(o => o.Id == orderId)
+            .Include(o => o.OrderEntries)
+            .ThenInclude(entry => entry.Product)
+            .SelectMany(o => o.OrderEntries.Select(entry => 
+                OrderEntryDetailedDto.FromEntity(entry.Product, entry.Quantity)
+            ))
+            .ToList();
+    }
+
 }

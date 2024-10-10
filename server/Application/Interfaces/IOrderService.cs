@@ -14,5 +14,6 @@ public interface IOrderService
     List<OrderResponseDto> GetOrdersByCustomerId(int customerId);
     List<CustomerOrdersDto> GetHistoryForUsers();
     OrderResponseDto Update(OrderUpdateDto updateDto);
+    List<OrderEntryDetailedDto> GetOrderEntryDetails(int orderId);
 
 }
