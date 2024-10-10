@@ -1,6 +1,6 @@
-import {PaperCardProps} from "../models/PaperCardProps.ts";
+import {PaperCardProps} from "../../models/PaperCardProps.ts";
 import {useNavigate} from "react-router-dom";
-import {RoutePath} from "../routes/RoutePath.ts";
+import {RoutePath} from "../../routes/RoutePath.ts";
 
 const PaperCard = (paperCardProps: PaperCardProps) => {
 

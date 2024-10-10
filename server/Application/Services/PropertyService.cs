@@ -32,12 +32,15 @@ public class PropertyService: IPropertyService
         try
         {
             _context.Properties.Add(property);
+            _context.SaveChanges();
         }
         catch (Exception e)
         {
             throw new Exception(e.Message);
         }
-
+        
+        
+        
         return PropertyResponseDto.FromEntity(property);
     }
 
@@ -51,5 +54,20 @@ public class PropertyService: IPropertyService
         _context.Properties.Remove(property);
         return _context.SaveChanges() > 0;
     }
-    
+
+    public PropertyToClient UpdatePropertyById(PropertyToClient property)
+    {
+        try
+        {
+            _context.Properties.Update(property.ToProperty());
+            _context.SaveChanges();
+        }
+        catch (Exception e)
+        {
+            throw new Exception(e.Message);
+        }
+
+        return property;
+
+    }
 }

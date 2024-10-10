@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
-import { OrderResponseDto } from "../../Api.ts";
+import { OrderResponseDto } from "../../../Api.ts";
 import {useAtom} from "jotai";
-import {CardItemsAtom} from "../atoms/CardItemsAtom.tsx";
+import {CardItemsAtom} from "../../atoms/CardItemsAtom.tsx";
 
 interface Props {
     orderResponse: OrderResponseDto;

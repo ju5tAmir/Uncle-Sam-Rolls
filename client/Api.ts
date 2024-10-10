@@ -648,6 +648,23 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags Property
+     * @name PropertyUpdate
+     * @request PUT:/api/property/update
+     */
+    propertyUpdate: (data: PropertyToClient, params: RequestParams = {}) =>
+      this.request<Property, any>({
+        path: `/api/property/update`,
+        method: "PUT",
+        body: data,
+        type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
+     * @tags Property
      * @name PropertyDelete
      * @request DELETE:/api/property/{id}
      */

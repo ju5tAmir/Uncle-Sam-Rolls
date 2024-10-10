@@ -1,6 +1,6 @@
 import React from "react";
 import {useNavigate} from "react-router-dom";
-import {RoutePath} from "../routes/RoutePath.ts";
+import {RoutePath} from "../../routes/RoutePath.ts";
 
 const LandingPage = () => {
 

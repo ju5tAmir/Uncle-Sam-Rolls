@@ -1,10 +1,10 @@
 import {useAtom} from "jotai";
-import {CardItemsAtom} from "../atoms/CardItemsAtom.tsx";
+import {CardItemsAtom} from "../../atoms/CardItemsAtom.tsx";
 import {useEffect} from "react";
-import {CardItem} from "../models/CardItem.ts";
-import getItemFromLocalStorage from "../utilities/LocalStorageUtils.ts";
+import {CardItem} from "../../models/CardItem.ts";
+import getItemFromLocalStorage from "../../utilities/LocalStorageUtils.ts";
 import {useNavigate} from "react-router-dom";
-import {RoutePath} from "../routes/RoutePath.ts";
+import {RoutePath} from "../../routes/RoutePath.ts";
 
 const ShoppingCardIcon = () => {
 

@@ -1,18 +1,18 @@
 import {useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 import {useAtom} from "jotai";
-import {PapersAtom} from "../atoms/PapersAtom.tsx";
-import {Paper} from "../../Api.ts";
-import {http} from "../http.ts";
+import {PapersAtom} from "../../atoms/PapersAtom.tsx";
+import {Paper} from "../../../Api.ts";
+import {http} from "../../http.ts";
 import NotFound from "./NotFound.tsx";
 import LoadingPage from "./LoadingPage.tsx";
-import NumberInput from "../components/NumberInput.tsx";
-import Button from "../components/Button.tsx";
+import NumberInput from "../../components/user/NumberInput.tsx";
+import Button from "../../components/user/Button.tsx";
 import toast from "react-hot-toast";
-import {CardItemsAtom} from "../atoms/CardItemsAtom.tsx";
-import {CardItem} from "../models/CardItem.ts";
-import {setItemToLocalStorage} from "../utilities/LocalStorageUtils.ts";
-import useCardUtils from "../utilities/CardUtils.ts";
+import {CardItemsAtom} from "../../atoms/CardItemsAtom.tsx";
+import {CardItem} from "../../models/CardItem.ts";
+import {setItemToLocalStorage} from "../../utilities/LocalStorageUtils.ts";
+import useCardUtils from "../../utilities/CardUtils.ts";
 
 const PaperDetails = () => {
     const {id} = useParams<{id: string}>();

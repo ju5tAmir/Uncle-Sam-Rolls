@@ -1,11 +1,11 @@
 import {useAtom} from "jotai/index";
-import {CardItemsAtom} from "../atoms/CardItemsAtom.tsx";
-import CheckoutItem from "../components/CheckoutItem.tsx";
+import {CardItemsAtom} from "../../atoms/CardItemsAtom.tsx";
+import CheckoutItem from "../../components/user/CheckoutItem.tsx";
 import React, {useEffect} from "react";
-import InvoiceTable from "../components/InvoiceTable.tsx";
+import InvoiceTable from "../../components/user/InvoiceTable.tsx";
 import {useNavigate} from "react-router-dom";
-import {RoutePath} from "../routes/RoutePath.ts";
-import {http} from "../http.ts";
+import {RoutePath} from "../../routes/RoutePath.ts";
+import {http} from "../../http.ts";
 import toast, {Toaster} from "react-hot-toast";
 
 const CheckoutPage = () => {

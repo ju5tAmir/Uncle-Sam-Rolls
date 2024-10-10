@@ -5,4 +5,6 @@ export const RoutePath = {
     access: "/access",
     checkout: "/checkout",
     orders: "/orders",
+    properties: "/properties",
+    customers: "/customers"
 }

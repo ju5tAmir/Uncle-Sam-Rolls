@@ -1,4 +1,4 @@
-import { CardItem } from "../models/CardItem.ts";
+import { CardItem } from "../../models/CardItem.ts";
 
 interface props {
     items: CardItem[];

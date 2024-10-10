@@ -37,6 +37,20 @@ public class PropertyController: ControllerBase
         }
     }
 
+    [HttpPut]
+    [Route("update")]
+    public ActionResult<Property> Update([FromBody] PropertyToClient property)
+    {
+        try
+        {
+            return Ok(_propertyService.UpdatePropertyById(property));
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
+    }
+
     [HttpDelete]
     [Route("{id}")]
     public ActionResult Delete([FromRoute] int id)

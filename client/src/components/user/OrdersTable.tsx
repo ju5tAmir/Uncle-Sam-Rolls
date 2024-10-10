@@ -1,7 +1,7 @@
-import { OrderResponseDto } from "../../Api.ts";
+import { OrderResponseDto } from "../../../Api.ts";
 import { useNavigate } from "react-router-dom";
-import { RoutePath } from "../routes/RoutePath.ts";
-import { formatDate } from "../utilities/TimeUtils.tsx";
+import { RoutePath } from "../../routes/RoutePath.ts";
+import { formatDate } from "../../utilities/TimeUtils.tsx";
 
 interface props {
     orders: OrderResponseDto[];

@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
+import {useAtom} from "jotai";
+import {TokenAtom} from "../../atoms/TokenAtom.tsx";
 
 const AccessCheck = () => {
     const [token, setToken] = useState<string>(); // Default token

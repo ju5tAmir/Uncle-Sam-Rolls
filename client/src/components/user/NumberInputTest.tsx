@@ -1,5 +1,5 @@
 import {useState} from "react";
-import useCardUtils from "../utilities/CardUtils.ts";
+import useCardUtils from "../../utilities/CardUtils.ts";
 
 interface props {
     onChange?: () => void,

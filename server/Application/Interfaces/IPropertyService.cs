@@ -8,4 +8,5 @@ public interface IPropertyService
     List<Property> GetAll();
     PropertyResponseDto Create(PropertyCreateDto propertyCreateDto);
     bool Delete(int id);
+    PropertyToClient UpdatePropertyById(PropertyToClient property);
 }

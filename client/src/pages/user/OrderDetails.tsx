@@ -1,10 +1,10 @@
 import { useParams } from "react-router-dom";
-import InvoiceTable from "../components/InvoiceTable.tsx";
+import InvoiceTable from "../../components/user/InvoiceTable.tsx";
 import { useEffect, useState } from "react";
-import { CardItem } from "../models/CardItem.ts";
-import { http } from "../http.ts";
-import { Order, OrderEntryDto, Paper } from "../../Api.ts";
-import { formatDate } from "../utilities/TimeUtils.tsx";
+import { CardItem } from "../../models/CardItem.ts";
+import { http } from "../../http.ts";
+import { Order, OrderEntryDto, Paper } from "../../../Api.ts";
+import { formatDate } from "../../utilities/TimeUtils.tsx";
 
 const OrderDetails = () => {
     const { id } = useParams();

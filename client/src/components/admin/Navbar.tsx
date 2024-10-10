@@ -1,5 +1,4 @@
-import DropdownMenu from "./DropdownMenu.tsx";
-import ShoppingCardIcon from "./ShoppingCardIcon.tsx";
+import DropdownMenu from "./customers/DropdownMenu.tsx";
 
 const Navbar = () => {
 
@@ -9,8 +8,16 @@ const Navbar = () => {
             path: "/"
         },
         {
+            title: "Customers",
+            path: "/customers"
+        },
+        {
             title: "Papers",
             path: "/papers"
+        },
+        {
+            title: "Properties",
+            path: "/properties"
         },
         {
             title: "Orders",
@@ -27,9 +34,10 @@ const Navbar = () => {
             <div className="flex justify-between m-10 place-items-center">
                 {/* Logo */}
                 <div className="text-gray-500 hover:text-gray-950">
-                    <a href="/">
+                    <a href="/public">
                         <span className="font-bold text-2xl text-slate-900">Uncle</span>
                         <span className="text-2xl text-slate-500">Sam</span>
+                        <span className={"text-xs align-text-top relative -top-2"}>admin</span>
                     </a>
                 </div>
 
@@ -50,7 +58,7 @@ const Navbar = () => {
 
                 <div
                 className="flex flex-row items-center h-8 gap-5">
-                    <ShoppingCardIcon/>
+                    {/*<ShoppingCardIcon/>*/}
                     <DropdownMenu/>
                 </div>
                 {/* Dropdown menu */}
