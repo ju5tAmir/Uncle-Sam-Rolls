@@ -51,3 +51,10 @@
 /home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/API/bin/Debug/net8.0/NSwag.Generation.AspNetCore.dll
 /home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/API/bin/Debug/net8.0/YamlDotNet.dll
 /home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/API/obj/Debug/net8.0/API.MvcApplicationPartsAssemblyInfo.cs
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/API/bin/Debug/net8.0/FluentValidation.dll
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/API/bin/Debug/net8.0/Castle.Core.dll
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/API/bin/Debug/net8.0/Moq.dll
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/API/bin/Debug/net8.0/xunit.abstractions.dll
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/API/bin/Debug/net8.0/xunit.assert.dll
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/API/bin/Debug/net8.0/xunit.core.dll
+/home/kali/class/thirdsemester/projects/Uncle-Sam-Rolls/server/API/bin/Debug/net8.0/xunit.execution.dotnet.dll
