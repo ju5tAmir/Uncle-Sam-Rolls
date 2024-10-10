@@ -45,8 +45,8 @@ const PropertiesPage = () => {
     return (
         <>
             <CreatePropertyModal onPropertyCreated={fetchProperties}  />
-            <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50">
-                <div className="w-full max-w-4xl p-4 bg-white shadow-md rounded-lg relative">
+            <div className="flex flex-col items-center justify-center bg-gray-50">
+                <div className="w-full p-4 bg-white shadow-md rounded-lg relative">
                     {/* Create Button positioned above the table */}
                     <div className={"flex justify-end mr-6"}>
                     <button

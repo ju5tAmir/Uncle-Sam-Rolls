@@ -18,7 +18,7 @@ public class PropertyController: ControllerBase
 
     [HttpGet]
     [Route("all")]
-    public ActionResult<List<Property>> GetAll()
+    public ActionResult<List<PropertyToClient>> GetAll()
     {
         return _propertyService.GetAll();
     }

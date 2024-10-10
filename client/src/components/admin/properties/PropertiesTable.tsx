@@ -21,7 +21,6 @@ const OrdersTable = (props: Props) => {
                         {/* Table Headers */}
                         <thead className="bg-gray-100 text-gray-600 uppercase text-sm leading-normal">
                         <tr>
-                            <th className="py-3 px-6 text-left">ID</th>
                             <th className="py-3 px-6 text-left">Property Name</th>
                             <th className="py-3 px-6 text-left">Actions</th>
                         </tr>
@@ -33,7 +32,6 @@ const OrdersTable = (props: Props) => {
                                 key={index}
                                 className="border-b border-gray-200 hover:bg-gray-50 transition"
                             >
-                                <td className="py-3 px-6">{property.propertyId}</td>
                                 <td className="py-3 px-6">{property.propertyName}</td>
                                 <td className="py-3 px-6 flex space-x-2">
                                     {/*<button*/}

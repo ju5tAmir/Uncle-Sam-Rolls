@@ -5,7 +5,7 @@ namespace Application.Interfaces;
 
 public interface IPropertyService
 {
-    List<Property> GetAll();
+    List<PropertyToClient> GetAll();
     PropertyResponseDto Create(PropertyCreateDto propertyCreateDto);
     bool Delete(int id);
     PropertyToClient UpdatePropertyById(PropertyToClient property);

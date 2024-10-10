@@ -658,12 +658,29 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     /**
      * No description
      *
+     * @tags Paper
+     * @name PaperUpdatePaper
+     * @request PUT:/api/paper/{id}/update
+     */
+    paperUpdatePaper: (id: number, data: PaperToClient, params: RequestParams = {}) =>
+      this.request<PaperResponseDto, any>({
+        path: `/api/paper/${id}/update`,
+        method: "PUT",
+        body: data,
+        type: ContentType.Json,
+        format: "json",
+        ...params,
+      }),
+
+    /**
+     * No description
+     *
      * @tags Property
      * @name PropertyGetAll
      * @request GET:/api/property/all
      */
     propertyGetAll: (params: RequestParams = {}) =>
-      this.request<Property[], any>({
+      this.request<PropertyToClient[], any>({
         path: `/api/property/all`,
         method: "GET",
         format: "json",

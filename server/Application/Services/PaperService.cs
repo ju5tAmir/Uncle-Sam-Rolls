@@ -156,4 +156,46 @@ public class PaperService: IPaperService
         
         return PaperResponseDto.FromEntity(paper);
     }
+
+    public bool UpdatePaper(int paperId, PaperToClient updatedPaper)
+    {
+        try
+        {
+            var existingPaper = _context.Papers
+                .Include(p => p.Properties)
+                .FirstOrDefault(p => p.Id == paperId);
+
+            if (existingPaper == null)
+            {
+                return false; 
+            }
+
+            // Update the existing paper's basic properties
+            existingPaper.Name = updatedPaper.Name;
+            existingPaper.Price = updatedPaper.Price;
+            existingPaper.Stock = updatedPaper.Stock;
+            existingPaper.Discontinued = updatedPaper.Discontinued;
+
+            existingPaper.Properties.Clear();
+        
+            foreach (var propertyDto in updatedPaper.Properties)
+            {
+                var property = _context.Properties.Find(propertyDto.PropertyId); // Fetch from the DB
+                if (property != null)
+                {
+                    existingPaper.Properties.Add(property);
+                }
+            }
+
+            // Save changes to the database
+            _context.SaveChanges();
+
+            return true; // Update successful
+        }
+        catch (Exception e)
+        {
+            throw new Exception(e.Message);
+        }
+    }
+
 }

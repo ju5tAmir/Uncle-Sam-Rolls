@@ -28,4 +28,23 @@ public class PaperToClient
             }).ToList()
         };
     }
+    
+    public Paper ToPaper()
+    {
+        return new Paper
+        {
+            Id = Id,
+            Discontinued = Discontinued,
+            Name = Name,
+            Price = Price,
+            Stock = Stock,
+            Properties = Properties.Select(p => new Property
+            {
+                Id = p.PropertyId,
+                PropertyName = p.PropertyName
+            }).ToList()
+        };
+    }
+
+    
 }

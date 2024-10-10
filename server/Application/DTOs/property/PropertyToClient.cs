@@ -17,4 +17,12 @@ public class PropertyToClient
         };
     }
 
+    public static PropertyToClient FromEntity(Property property)
+    {
+        return new PropertyToClient()
+        {
+            PropertyId = property.Id,
+            PropertyName = property.PropertyName
+        };
+    } 
 }

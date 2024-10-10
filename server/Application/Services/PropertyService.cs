@@ -18,9 +18,9 @@ public class PropertyService: IPropertyService
         _context = context;
     }
 
-    public List<Property> GetAll()
+    public List<PropertyToClient> GetAll()
     {
-        return _context.Properties.ToList();
+        return _context.Properties.Select(p => PropertyToClient.FromEntity(p)).ToList();
     }
 
     public PropertyResponseDto Create(PropertyCreateDto propertyCreateDto)

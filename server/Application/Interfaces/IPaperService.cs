@@ -14,4 +14,6 @@ public interface IPaperService
 
     PaperResponseDto RestockPaper(int paperId, int restockCount);
     PaperResponseDto DiscontinuePaper(int paperId, bool status);
+
+    bool UpdatePaper(int id, PaperToClient paper);
 }

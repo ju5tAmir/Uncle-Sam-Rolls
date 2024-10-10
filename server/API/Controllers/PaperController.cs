@@ -104,4 +104,23 @@ public class PaperController : ControllerBase
             return BadRequest(e.Message);
         }
     }
+    
+    [HttpPut]
+    [Route("{id}/update")]
+    public ActionResult<PaperResponseDto> UpdatePaper(int id, [FromBody] PaperToClient updateDto)
+    {
+        try
+        {
+            var updatedPaper = _paperService.UpdatePaper(id, updateDto);
+            if (updatedPaper == null)
+            {
+                return NotFound($"Paper with id {id} not found.");
+            }
+            return Ok(updatedPaper);
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
+    }
 }
