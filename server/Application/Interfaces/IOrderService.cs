@@ -7,6 +7,7 @@ namespace Application.Interfaces;
 public interface IOrderService
 {
     List<Order> GetOrders();
+    List<OrderResponseDto> GetAllOrders();
     Order GetOrder(int id);
     OrderResponseDto Create(OrderCreateDto orderCreateDto);
     OrderResponseDto GetOrderById(int id);

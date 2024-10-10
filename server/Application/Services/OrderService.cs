@@ -24,6 +24,19 @@ public class OrderService: IOrderService
         return _context.Orders.ToList();
     }
 
+    public List<OrderResponseDto> GetAllOrders()
+    {
+        try
+        {
+            return _context.Orders.Include(o=> o.OrderEntries).Select(o => OrderResponseDto.FromEntity(o)).ToList();
+        }
+        catch (Exception e)
+        {
+            throw new Exception(e.Message);
+        }
+        
+    }
+
     public Order GetOrder(int id)
     {
         throw new NotImplementedException();

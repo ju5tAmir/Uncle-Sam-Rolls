@@ -16,6 +16,20 @@ public class OrderController : ControllerBase
     }
     
     [HttpGet]
+    [Route("get/all")]
+    public ActionResult<List<OrderResponseDto>> GetAllOrders()
+    {
+        try
+        {
+            return Ok(_orderService.GetAllOrders());
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
+    }
+    
+    [HttpGet]
     [Route("{id}")]
     public ActionResult<OrderResponseDto> GetOrderById([FromRoute] int id)
     {

@@ -8,9 +8,9 @@ const OrdersPage = () => {
     const [orders, setOrders] = useState<OrderResponseDto[]>([]);
 
     const fetchOrders = async () => {
-        const res = await http.api.orderGetHistoryForUsers();
+        const res = await http.api.orderGetAllOrders();
 
-        if (res) {
+        if (res.data) {
             setOrders(res.data);
         }
     }
@@ -21,6 +21,7 @@ const OrdersPage = () => {
 
     return (
         <>
+            {}
             <OrdersTable orders={orders}/>
         </>
     )
