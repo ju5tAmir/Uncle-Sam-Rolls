@@ -62,45 +62,42 @@ const PaperDetails = () => {
     if (paper) {
         return (
             <>
-                <div className="grid grid-cols-2 place-items-center justify-between tracking-tight bg-base-100">
-                    <div>
+                <div className="grid grid-cols-1 md:grid-cols-2 place-items-center justify-between p-8 bg-white rounded-lg shadow-lg">
+                    <div className="flex justify-center mb-6 md:mb-0">
                         <img
-                            src="https://astroship.web3templates.com/_astro/hero.DlKDY3ml_Z1VhsC8.webp"
-                            alt="Astroid Picture"
-                            className="max-w-sm rounded-lg shadow-2xl"/>
+                            src="https://spaldingeducationstore.org/cdn/shop/products/paper-spalding-vertical-paper-5-8-inch-pa1_530x@2x.jpg"
+                            alt="Paper Picture"
+                            className="max-w-sm rounded-lg shadow-2xl transition-transform transform hover:scale-105"
+                        />
                     </div>
 
-                    <div className="flex flex-col p-10 m-10  gap-4">
-                        <h1 className="text-5xl font-bold">
+                    <div className="flex flex-col p-6 gap-6">
+                        <h1 className="text-4xl font-extrabold text-gray-800 hover:text-gray-600 transition-colors">
                             {paper.name}
                         </h1>
 
-                        <p className="text-lg mt-4 text-slate-600 max-w-xl">
-                            Astroship is a starter template for startups, marketing websites & landing
-                            pages.
-                            <wbr/>
-                            Built with Astro.build and TailwindCSS. You can quickly
-                            create any website with this starter.
-                        </p>
-                        <div className="card-actions flex-row flex-wrap">
-                            {paper.properties?.map ((property) => (
-                                <div key={property.id} className="badge badge-outline">{property.propertyName}</div>
-                            ))}
+                        <div className="flex flex-col">
+                            <span className="text-2xl font-semibold text-gray-800">${paper.price.toFixed(2)}</span>
+                            <span className={`text-lg ${paper.stock ? 'text-green-600' : 'text-red-600'} font-medium`}>
+                            {paper.stock ? 'In Stock' : 'Out of Stock'}
+                        </span>
+                            {paper.discontinued && (
+                                <span className="text-sm text-red-500 font-medium">Discontinued</span>
+                            )}
                         </div>
 
+                        <NumberInput value={counter} onChange={setCounter} />
 
-                        <NumberInput value={counter} onChange={setCounter}/>
-
-                        <Button onClick={() => {
-                            cardUtils.addItemToCard({paper: paper, quantity: counter})
-
-
-                            toast.success("Item added to the cart successfully.");
-                        }}/>
+                        <Button
+                            onClick={() => {
+                                cardUtils.addItemToCard({ paper, quantity: counter });
+                                toast.success("Item added to the cart successfully.");
+                            }}
+                        />
                     </div>
                 </div>
             </>
-        )
+        );
     }
 
 

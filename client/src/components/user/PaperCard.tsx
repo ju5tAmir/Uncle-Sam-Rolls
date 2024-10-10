@@ -25,7 +25,7 @@ const PaperCard = (paperCardProps: PaperCardProps) => {
                     }}>
                         <figure>
                             <img
-                                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                                src="https://spaldingeducationstore.org/cdn/shop/products/paper-spalding-vertical-paper-5-8-inch-pa1_530x@2x.jpg"
                                 alt="Paper Picture"/>
                         </figure>
                         <div className="card-body overflow-y-auto ">

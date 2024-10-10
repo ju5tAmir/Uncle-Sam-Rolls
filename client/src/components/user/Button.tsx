@@ -7,7 +7,7 @@ const Button = ({onClick}) => {
         <>
             <button
                 onClick={onClick}
-                className="flex items-center justify-center bg-blue-500 text-white font-semibold py-2 px-4 rounded shadow-md hover:bg-blue-600 transition duration-200 ease-in-out"
+                    className="flex items-center justify-center bg-blue-500 text-white font-semibold py-2 px-4 rounded shadow-md hover:bg-blue-600 transition duration-200 ease-in-out"
             >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
