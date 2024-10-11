@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import {useAtom} from "jotai";
-import {TokenAtom} from "../../atoms/TokenAtom.tsx";
-import {RoutePath} from "../../routes/RoutePath.ts";
+import {TokenAtom} from "../../../atoms/TokenAtom.tsx";
+import {RoutePath} from "../../../routes/RoutePath.ts";
 import {useNavigate} from "react-router-dom";
 
 const AccessCheck = () => {

@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { Customer, Order, OrderEntryDetailedDto } from "../../../../Api.ts";
 import { useEffect, useState } from "react";
 import { http } from "../../../http.ts";
-import NotFound from "../../user/NotFound.tsx";
+import NotFound from "../../user/general/NotFound.tsx";
 import CustomerInfo from "../../../components/admin/orders/CustomerInfo.tsx";
 import OrderInfo from "../../../components/admin/orders/OrderInfo.tsx";
 import OrderEntries from "../../../components/admin/orders/OrderEntries.tsx";

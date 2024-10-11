@@ -1,8 +1,8 @@
-import PaperCard from "../../components/user/PaperCard.tsx";
+import PaperCard from "../../../components/user/PaperCard.tsx";
 import {useEffect} from "react";
-import {http} from "../../http.ts";
+import {http} from "../../../http.ts";
 import {useAtom} from 'jotai';
-import {PapersAtom} from "../../atoms/PapersAtom.tsx";
+import {PapersAtom} from "../../../atoms/PapersAtom.tsx";
 
 
 const PapersPage = () => {

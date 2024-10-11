@@ -1,9 +1,9 @@
 import {useEffect, useState} from "react";
-import {Order, OrderResponseDto} from "../../../Api.ts";
-import {http} from "../../http.ts";
+import {Order, OrderResponseDto} from "../../../../Api.ts";
+import {http} from "../../../http.ts";
 import {unmountComponentAtNode} from "react-dom";
 import OrderDetail from "../components/OrderDetail.tsx";
-import OrdersTable from "../../components/user/OrdersTable.tsx";
+import OrdersTable from "../../../components/user/OrdersTable.tsx";
 
 const OrdersPage = () => {
     const [orders, setOrders] = useState<OrderResponseDto[]>([]);

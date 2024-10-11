@@ -1,4 +1,4 @@
-import DropdownMenu from "./customers/DropdownMenu.tsx";
+import DropdownMenu from "../customers/DropdownMenu.tsx";
 
 const Navbar = () => {
 
