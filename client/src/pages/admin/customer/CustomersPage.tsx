@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
-import {Customer} from "../../../Api.ts";
-import {http} from "../../http.ts";
-import CustomersTable from "../../components/admin/customers/CustomersTable.tsx";
+import {Customer} from "../../../../Api.ts";
+import {http} from "../../../http.ts";
+import CustomersTable from "../../../components/admin/customers/CustomersTable.tsx";
 
 const CustomersPage = () => {
 

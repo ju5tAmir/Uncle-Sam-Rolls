@@ -1,8 +1,8 @@
 import {useEffect, useState} from "react";
-import {Customer, OrderResponseDto} from "../../../Api.ts";
-import {http} from "../../http.ts";
+import {Customer, OrderResponseDto} from "../../../../Api.ts";
+import {http} from "../../../http.ts";
 import {useParams} from "react-router-dom";
-import OrdersTable from "../../components/admin/orders/OrdersTable.tsx";
+import OrdersTable from "../../../components/admin/orders/OrdersTable.tsx";
 
 const CustomerPage = () => {
 
