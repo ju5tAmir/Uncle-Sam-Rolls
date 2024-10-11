@@ -1,7 +1,7 @@
-import {http} from "../../http.ts";
+import {http} from "../../../http.ts";
 import {useEffect, useState} from "react";
-import {OrderResponseDto} from "../../../Api.ts";
-import OrdersTable from "../../components/admin/orders/OrdersTable.tsx";
+import {OrderResponseDto} from "../../../../Api.ts";
+import OrdersTable from "../../../components/admin/orders/OrdersTable.tsx";
 
 const OrdersPage = () => {
 
