@@ -1,7 +1,6 @@
 using Application.DTOs.paper;
 using Application.DTOs.property;
 using Application.Interfaces;
-using DataAccess;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
@@ -47,7 +46,7 @@ public class PaperController : ControllerBase
 
     
     [HttpPost]
-    [Route("create")]
+    [Route("createpaper")]
     public ActionResult<PaperResponseDto> Create([FromBody] PaperCreateDto createDto)
     {
         try
