@@ -1,9 +1,9 @@
 import {useEffect, useState} from "react";
-import {PaperToClient} from "../../../Api.ts";
-import {http} from "../../http.ts";
-import PapersTable from "../../components/admin/papers/PapersTable.tsx";
+import {PaperToClient} from "../../../../Api.ts";
+import {http} from "../../../http.ts";
+import PapersTable from "../../../components/admin/papers/PapersTable.tsx";
 import {useNavigate} from "react-router-dom";
-import {RoutePath} from "../../routes/RoutePath.ts";
+import {RoutePath} from "../../../routes/RoutePath.ts";
 
 const PapersPage = () => {
     const [papers, setPapers] = useState<PaperToClient[]>([]);

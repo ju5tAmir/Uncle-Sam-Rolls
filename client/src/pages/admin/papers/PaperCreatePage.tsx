@@ -1,9 +1,9 @@
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { PaperCreateDto, PropertyToClient } from "../../../Api.ts";
-import { http } from "../../http.ts";
+import { PaperCreateDto, PropertyToClient } from "../../../../Api.ts";
+import { http } from "../../../http.ts";
 import toast from "react-hot-toast";
-import { RoutePath } from "../../routes/RoutePath.ts";
+import { RoutePath } from "../../../routes/RoutePath.ts";
 
 const PaperCreatePage = () => {
     const [paper, setPaper] = useState<PaperCreateDto>({

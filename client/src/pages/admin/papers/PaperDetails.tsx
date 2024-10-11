@@ -1,9 +1,9 @@
 import {useNavigate, useParams} from "react-router-dom";
 import { useEffect, useState } from "react";
-import { PaperToClient, PropertyToClient } from "../../../Api.ts";
-import { http } from "../../http.ts";
+import { PaperToClient, PropertyToClient } from "../../../../Api.ts";
+import { http } from "../../../http.ts";
 import toast from "react-hot-toast";
-import {RoutePath} from "../../routes/RoutePath.ts";
+import {RoutePath} from "../../../routes/RoutePath.ts";
 
 const PaperDetails = () => {
     const { id } = useParams();
